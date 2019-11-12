@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}公钥加密{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<h1>公钥为</h1>
+<p>{{ public_key }}</p>
+<h1>私钥为</h1>
+<p>{{ private_key }}</p>
+<form name="input" action="http://127.0.0.1:5000/index/" method="get">
+<input type="submit" value="返回主页"><br>
+</form>
+{% endblock %}

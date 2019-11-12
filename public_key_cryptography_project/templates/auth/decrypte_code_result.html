@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}明文{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<h1>明文为</h1>
+<p>{{ plaintext }}</p>
+<form name="input" action="http://127.0.0.1:5000/index/" method="get">
+<input type="submit" value="返回主页"><br>
+</form>
+{% endblock %}

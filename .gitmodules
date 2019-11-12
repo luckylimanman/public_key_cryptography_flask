@@ -1,0 +1,3 @@
+[submodule "public_key_cryptography_project/public_key_cryptography"]
+	path = public_key_cryptography_project/public_key_cryptography
+	url = git@github.com:luckylimanman/public_key_cryptography.git

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}公钥加密{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form name="input" action="generate_key" method="get">
+<input type="submit" value="生成密钥"><br>
+</form>
+<form name="input" action="encrypte_code" method="get">
+<input type="submit" value="加密"><br>
+</form>
+<form name="input" action="decrypte_code" method="get">
+<input type="submit" value="解密"><br>
+</form>
+<!-- <form method="post">
+  <input type="submit" value="生成密钥"><br>
+  <input type="submit" value="加密"><br>
+  <input type="submit" value="解密"><br>
+</form> -->
+{% endblock %}
