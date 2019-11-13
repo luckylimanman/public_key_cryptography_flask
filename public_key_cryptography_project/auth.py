@@ -16,7 +16,7 @@ app.config.from_object('config')
 @app.route('/index/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
-        return render_template('index.html')
+        pass
     return render_template('index.html')
 
 
@@ -34,7 +34,8 @@ def generate_key():
 def encrypte_code():
     if request.method == 'POST':
         plaintext = request.form['plaintext']
-        ciphertext = cryptography.encryption(plaintext)
+        public_key = request.form['public_key']
+        ciphertext = cryptography.encryption(plaintext, public_key)
         return render_template('/auth/encrypte_code_result.html',
                                ciphertext=ciphertext)
     return render_template('/auth/encrypte_code.html')

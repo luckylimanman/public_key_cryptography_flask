@@ -6,7 +6,11 @@
 
 {% block content %}
 <form method="post">
-  <input name="plaintext" id="plaintext" required>
+  明文:<input name="plaintext" id="plaintext" required><br>
+  公钥:<input name="public_key" id="public_key" required><br>
   <input type="submit" value="加密"><br>
+</form>
+<form name="input" action="http://127.0.0.1:5000/index/" method="get">
+<input type="submit" value="返回主页"><br>
 </form>
 {% endblock %}
